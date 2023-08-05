@@ -144,7 +144,7 @@
     convertbutton.addEventListener("click", () => {
       container2.innerHTML = "";
       fetch(
-        `https://code-converter-b33j.onrender.com/api/convertcode?language=${language.value}`,
+        `https://backend-code-converter.onrender.com/api/convertcode?language=${language.value}`,
         {
           method: "POST",
           headers: {
@@ -170,7 +170,7 @@
 
     debugbutton.addEventListener("click", () => {
       container2.innerHTML = "";
-      fetch(`https://code-converter-b33j.onrender.com/api/debug`, {
+      fetch(`https://backend-code-converter.onrender.com/api/debug`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -194,7 +194,7 @@
 
     qualitybutton.addEventListener("click", () => {
       container2.innerHTML = "";
-      fetch(`https://code-converter-b33j.onrender.com/api/qualitycheck`, {
+      fetch(`https://backend-code-converter.onrender.com/api/qualitycheck`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -215,5 +215,9 @@
           console.log(err);
         });
     });
+    fetch(`https://backend-code-converter.onrender.com/`)
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((e) => console.log(e));
   </script>
 </html>
