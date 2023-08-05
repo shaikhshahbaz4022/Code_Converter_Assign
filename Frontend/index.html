@@ -56,6 +56,45 @@
         text-align: center;
         text-decoration: underline;
       }
+      @media (max-width: 767px) {
+        body {
+          font-size: 14px;
+        }
+
+        #parent {
+          grid-template-columns: 1fr;
+        }
+
+        #middle {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        #container,
+        #container2 {
+          height: 300px;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        body {
+          font-size: 16px;
+        }
+
+        #parent {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        #middle {
+          flex-direction: row;
+          gap: 20px;
+        }
+
+        #container,
+        #container2 {
+          height: 350px;
+        }
+      }
     </style>
   </head>
 
